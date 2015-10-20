@@ -1,9 +1,6 @@
 # jQuery UI Monthpicker
 
-Pick a month.
-
 ![Pick a month](https://github.com/tlemens/jquery-ui-monthpicker/blob/master/monthpicker.gif)
-
 
 ## HTML
 
