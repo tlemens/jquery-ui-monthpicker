@@ -12,6 +12,7 @@ Pick a month.
 ```
 
 Hidden field: Actual date (1th of the picked month)
+
 Text field: Month
 
 ## jQuery
