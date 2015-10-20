@@ -12,7 +12,6 @@ Pick a month.
 ```
 
 Hidden field: Actual date (1th of the picked month)
-
 Text field: Month
 
 ## jQuery
@@ -29,7 +28,7 @@ $('.js-monthpicker').monthpicker({ altFormat: 'MM y' });
 
 ## Style
 
-Use the ui-monthpicker class to style the monthpicker.
+Use the ui-monthpicker class for styling.
 
 ```css
 .ui-monthpicker {
