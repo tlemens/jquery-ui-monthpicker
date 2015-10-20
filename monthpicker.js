@@ -2,6 +2,7 @@
   $.extend($.datepicker, {
     _generateDaysHTML: $.datepicker._generateHTML,
     _generateMonthsHTML: function(inst) {
+      inst.dpDiv.addClass('ui-monthpicker');
       var maxDraw, prevText, prev, nextText, next,
 			controls, buttonPanel, showWeek, dayNames, dayNamesMin,
 			monthNames, monthNamesShort, beforeShowDay, showOtherMonths,
@@ -128,12 +129,26 @@
     },
     _generateHTML: function(inst) {
       if ( inst.settings.monthPicker ) {
-        inst.settings.stepMonths = 12;
-        inst.settings.changeMonth = false;
         return this._generateMonthsHTML(inst);
       } else {
         return this._generateDaysHTML(inst);
       }
     }
   });
+ 
+  $.fn.monthpicker = function(options) {
+    return this.each(function() {
+      var $this = $(this);
+      var altField = $this.next();
+      altField.on('focus', function() { $this.datepicker('show') });
+      var settings = {
+        monthPicker: true,
+        stepMonths: 12,
+        changeMonth: false,
+        altField: altField,
+        altFormat: 'M yy' }
+      $.extend(settings, options);
+      $this.datepicker(settings);
+    });
+  }
 }) (jQuery);
