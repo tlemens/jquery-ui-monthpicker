@@ -11,8 +11,10 @@ Pick a month.
 <input class="js-monthpicker" type="hidden"><input type="text">
 ```
 
-Hidden field: Actual date (1th of the picked month)
-Text field: Month
+Field | Value
+--- | ---
+Hidden | Actual date (1th of the picked month)
+Text | Picked month
 
 ## jQuery
 
