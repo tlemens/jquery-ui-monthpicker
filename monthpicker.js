@@ -113,7 +113,7 @@
               "<span class='ui-state-default" +
               (printDate.getTime() === today.getTime() ? " ui-state-highlight" : "") +
               (printDate.getTime() === currentDate.getTime() ? " ui-state-active" : "") + // highlight selected day
-							"'>" + monthNamesShort[month] + "</span><a href='#' style='display: none;'>1</a></td>"; // display selectable date
+							"'>" + monthNamesShort[month] + "</span><a href='#' data-date='1' style='display: none;'>1</a></td>"; // display selectable date
           }
           calender += '</tr>';
         }
